@@ -14,6 +14,8 @@ LINE = (
 
 
 def main():
+    # Gate: the entry must be 1-120 characters (RULES.txt).
+    assert 1 <= len(LINE) <= 120, f"entry is {len(LINE)} chars"
     os.makedirs("/output", exist_ok=True)
     with open("/output/entry.txt", "w", encoding="utf-8") as f:
         f.write(LINE)
